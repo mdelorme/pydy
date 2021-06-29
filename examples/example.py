@@ -6,6 +6,7 @@ reader = pydy.XdmfReader()
 d = reader.readSnapshot('example.xmf')
 
 print('Simulation time is :',      d.getTime())
+print('Number of dimensions is :', d.getNDim())
 print('Total energy is :',         d.getTotalEnergy())
 print('Total kinetic energy is :', d.getTotalKineticEnergy())
 
@@ -20,8 +21,6 @@ xx = xx.ravel()
 yy = yy.ravel()
 zz = np.zeros_like(xx)
 pos = np.array((xx, yy, zz)).T
-
-print(pos.shape)
 
 ### Extracting density
 cids = d.getCellsFromPositions(pos)

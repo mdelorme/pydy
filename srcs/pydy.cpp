@@ -26,6 +26,7 @@ PYBIND11_MODULE(pydy, m) {
     .def("setName", &Snapshot::setName)
     .def("setNDim", &Snapshot::setNDim)
     .def("print",   &Snapshot::print)
+    .def("getNDim", &Snapshot::getNDim)
 
     .def("getCellFromPosition",   &Snapshot::getCellFromPosition)
     .def("getCellsFromPositions", &Snapshot::getCellsFromPositions)

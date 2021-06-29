@@ -98,6 +98,7 @@ class Snapshot {
 
   /** Domain info **/
   int getNCells();
+  int getNDim();
   bool hasAttribute(std::string attribute);
   BoundingBox getDomainBoundingBox();
   

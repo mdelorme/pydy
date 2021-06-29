@@ -72,6 +72,13 @@ void Snapshot::setNDim(int nDim) {
   nElems = (nDim == 2 ? 4 : 8);
 }
 
+/** 
+ * Returns the number of dimensions of the snapshot
+ **/
+int Snapshot::getNDim() {
+  return nDim;
+}
+
 /**
  * Adds a handle to an HDF5 file if not already opened
  * @param handle the string reference to the actual file
